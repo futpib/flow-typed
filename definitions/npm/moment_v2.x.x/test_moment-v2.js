@@ -2,6 +2,12 @@
 import moment from 'moment';
 import { duration } from 'moment';
 
+const momentCommonJS = require('moment');
+const { duration: durationCommonJS } = require('moment');
+
+(momentCommonJS: typeof moment);
+(durationCommonJS: typeof duration);
+
 // $ExpectError
 import { moment } from 'moment';
 
